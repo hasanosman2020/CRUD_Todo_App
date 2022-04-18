@@ -1,7 +1,6 @@
 body {
     font-family: 'Bebas Neue', cursive;
-    /*font-family: 'Raleway', sans-serif;*/
-    margin: 0 50px;
+    margin: 1.5rem;
     background-color:rgb(250, 246, 215);
     overflow: hidden;
     display: flex;
@@ -16,10 +15,12 @@ body {
     height: 500px;
     border: 20px solid rgba(0, 0, 0, 0);
     border-radius: 8px;
+    margin: 1.5rem;
     padding: 15px;
+    overflow: scroll;
 }
 
-#addNew {
+#addNew{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,8 +30,19 @@ body {
     cursor: pointer;
 }
 
-fa-plus {
+.fa-plus {
     background-color: silver;
     padding: 3px;
     border-radius: 3px;
+}
+
+#tasks {
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+#msg {
+    color: red;
 }
