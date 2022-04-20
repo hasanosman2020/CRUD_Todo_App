@@ -1,5 +1,5 @@
 body {
-    font-family: 'Bebas Neue', cursive;
+    /*font-family: 'Bebas Neue', cursive;*/
     margin: 1.5rem;
     background-color:rgb(250, 246, 215);
     overflow: hidden;
@@ -28,12 +28,14 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    border: 3px solid red;
 }
 
 .fa-plus {
     background-color: silver;
     padding: 3px;
     border-radius: 3px;
+    border: 3px solid purple;
 }
 
 #tasks {
@@ -43,6 +45,24 @@ body {
     gap: 14px;
 }
 
+#tasks div {
+    border: 3px solid rgba(27, 45, 63, 0.933);
+    background-color:rgb(200, 209, 234);
+    border-radius: 6px;
+    padding: 5px;
+    display: grid;
+    gap: 4px;
+}
+
+#tasks div .options {
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+}
+
+#tasks div .options i {
+    cursor: pointer;
+}
 #msg {
     color: red;
 }
