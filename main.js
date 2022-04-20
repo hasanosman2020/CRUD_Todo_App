@@ -27,10 +27,9 @@ let formValidation = () => {
     //function to close the modal when user clicks on the button labelled 'Add
     add.setAttribute('data-bs-dismiss', 'modal')
     add.click()
-    /*
-    (() => {
+    ;(() => {
       add.setAttribute('data-bs-dismiss', '')
-    })()*/
+    })()
   }
 }
 
@@ -63,7 +62,7 @@ let createTasks = () => {
 
             <span class = 'options'>
             <i onClick = 'editTask(this)' data-bs-toggle = 'modal' data-bs-target = 'form' class = 'fas fa-edit'></i>
-            <i onClick = 'deleteTask(this):createTasks()' class = 'fas fa-trash'></i>
+            <i onClick = 'deleteTask(this);createTasks()' class='fas fa-trash-alt'></i>                                                         
             </span>
             
             </div>`)
@@ -77,6 +76,26 @@ let resetForm = () => {
   textarea.value = ''
 }
 
+/*
+let deleteTask = (e) => {
+    e.parentElement.parentElement.remove();
+    data.splice(e.parentElement.parentElement.id, 1)localStorage.getItem('data', JSON.stringify(data));
+    console.log(data);
+
+}
+*/
+/*
+let editTask = (e) => {
+    let selectedTask = we.parentElement.parentElement;
+
+    textInput.value = selectedTask.children(0).innerHTML;
+    dateInput.value = selectedTask.children(1).innerHTML;
+    textarea.value =selectedTask.children(2).innerHTML;
+
+    deleteTask(e);
+
+}*/
+
 ;(() => {
   data = JSON.parse(localStorage.getItem('data')) || []
   console.log(data)
@@ -84,15 +103,6 @@ let resetForm = () => {
 })()
 
 /*
-
-    add.setAttribute('data-bs-dismiss', 'modal')
-
-    add.click()
-    ;(() => {
-      add.setAttribute('data-bs-dismiss', ' ')
-    })()
-  }
-}
 
 let data = [{}]
 
